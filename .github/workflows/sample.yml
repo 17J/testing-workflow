@@ -6,9 +6,15 @@ jobs:
   run-shell-commands:
     runs-on: ubuntu-latest
     steps:
-      - name: string 
+      - name: string
         run: echo "Welcome to India"
       - name: multiline script
         run: |
-           node -v
-           npm -v
+          node -v
+          npm -v
+
+      - name: python command
+        run: |
+          import platform
+          print(platform.processor())
+        shell: python
