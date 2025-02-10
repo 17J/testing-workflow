@@ -16,6 +16,13 @@ jobs:
         run: |
           pwd
           ls
+      - name: Checkout
+        uses: action/checkout
+
+      - name: List files after checkout
+        run: |
+          pwd
+          ls -a
 
       - name: python command
         run: |
