@@ -1,8 +1,8 @@
 name: Actions Workflow
 
 on:
-  schedule:
-    - cron: "0/2 5 * * *" #it runs on 2 minutes from 59 seconds
+  # schedule:
+  #   - cron: "0/2 5 * * *" #it runs on 2 minutes from 59 seconds
 
   pull_request:
     types: [closed, assigned, opened, reopened]
