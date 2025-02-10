@@ -1,0 +1,18 @@
+name: Custom Environment Variables
+
+on: push
+
+env:
+  SUBSCRIBE: Subscribe #this is global enviroment variable avail for all jobs
+
+Jobs:
+  Subscribe-my-topics:
+    runs-on: ubuntu-latest
+    env:
+      LIKE: Please like share #this is second avail all This Jobs
+    steps:
+      - name: "Please like share and Subscribe our Devops hint Channel"
+        run: echo "This is sample $LIKE and $SUBSCRIBE our $CHANNEL_NAME"
+
+        env:
+          CHANNEL_NAME: DevopsHint #this is third avail for this steps particular
