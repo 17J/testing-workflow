@@ -6,6 +6,11 @@ jobs:
   default-env-variables:
     runs-on: ubuntu-latest
     steps:
+      - name: Testing-Secrets
+        run: |
+          echo "$DEVOPS"
+        env:
+          DEVOPS: ${{secrets.SECRET_TOKEN}}
       - name: Environment variables
         run: |
           echo "GITHUB_ACTION: ${"GITHUB_ACTION}"
@@ -18,3 +23,4 @@ jobs:
           echo "GITHUB_REPOSITORY: ${GITHUB_REPOSITORY}"
           echo "GITHUB_SHA: ${$GITHUB_SHA}"
           echo "RUNNER_OS: ${RUNNER_OS}"
+ 
