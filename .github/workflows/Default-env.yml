@@ -13,7 +13,7 @@ jobs:
           DEVOPS: ${{secrets.SECRET_TOKEN}}
       - name: Environment variables
         run: |
-          echo "GITHUB_ACTION: ${"GITHUB_ACTION}"
+          echo "GITHUB_ACTION: ${GITHUB_ACTION}"
           echo "HOME: ${HOME}"
           echo "GITHUB_WORKSPACE: ${GITHUB_WORKSPACE}"
           echo "GITHUB_ACTIONS: ${GITHUB_ACTIONS}"
@@ -23,4 +23,3 @@ jobs:
           echo "GITHUB_REPOSITORY: ${GITHUB_REPOSITORY}"
           echo "GITHUB_SHA: ${$GITHUB_SHA}"
           echo "RUNNER_OS: ${RUNNER_OS}"
- 
